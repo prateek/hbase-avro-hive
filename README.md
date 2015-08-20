@@ -14,7 +14,15 @@ $ java -cp $CP com.cloudera.sa.examples.HBasePut
 ```
 
 ### Next, create Hive table and view for the HBase table
-The provided file, `setup-hive.hql` creates a Hive table named `test_hbase_avro` using the functionality from the JIRA pointed to above, to expose the Hbase table as following:
+The provided file, `setup-hive.hql` creates a Hive table named `test_hbase_avro` using the functionality from the JIRA pointed to above.
+
+To begin with, run the `setup-hive.hql` file:
+
+```sh
+$ hive -f setup-hive.hql
+```
+
+Now to explore the created tables:
 
 ```sh
 $ hive -e "desc test_hbase_avro; select * from test_hbase_avro;"
@@ -50,3 +58,6 @@ OK
 4       Roger   Black
 Time taken: 1.377 seconds, Fetched: 4 row(s)
 ```
+
+# TODO
+- insert followup note about UDTF extensions
