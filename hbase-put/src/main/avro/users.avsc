@@ -1,0 +1,8 @@
+{"namespace": "com.cloudera.sa.examples.avro",
+ "type": "record",
+ "name": "User",
+ "fields": [
+     {"name": "name", "type": "string"},
+     {"name": "favourite_color", "type": "string"}
+ ]
+}
