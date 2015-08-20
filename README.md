@@ -50,19 +50,3 @@ OK
 4       Roger   Black
 Time taken: 1.377 seconds, Fetched: 4 row(s)
 ```
-
-```sh
-$ hive -e "desc test_hbase_avro; select * from test_hbase_avro;"
-
-OK
-key                     string                  from deserializer
-cf_rec                  struct<name:string,favourite_color:string>      from deserializer
-Time taken: 2.252 seconds, Fetched: 2 row(s)
-
-OK
-1       {"name":"John","favourite_color":"Red"}
-2       {"name":"Jane","favourite_color":"Grey"}
-3       {"name":"Mike","favourite_color":"Blue"}
-4       {"name":"Roger","favourite_color":"Black"}
-Time taken: 0.635 seconds, Fetched: 4 row(s)
-```
